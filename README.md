@@ -77,22 +77,22 @@ Understanding host-level threats requires combining static and dynamic analysis 
 
 ### Static Analysis vs. Dynamic Analysis
 
-                ┌─────────────────────────────┐
-                │ **Malware Analysis Methods**
-                └────────────┬────────────────┘
-                             │
-       ┌─────────────────────┴─────────────────────┐
-       ▼                                           ▼
-┌──────────────────────┐                    ┌──────────────────────┐
-│   Static Analysis    │                    │   Dynamic Analysis   │
-├──────────────────────┤                    ├──────────────────────┤
-│• Examine code without│                    │ • Execute sample in  │
-│   executing binary   │                    │   isolated sandbox   │
-│ • Inspect headers,   │                    │ • Monitor runtime    │
-│   hashes, & strings  │                    │   system API calls   │
-│ • Reverse engineering│                    │ • Observe network &  │
-│   via disassemblers  │                    │   file modifications │
-└──────────────────────┘                    └──────────────────────┘
+                    ┌─────────────────────────────┐
+                    │ **Malware Analysis Methods**
+                    └────────────┬────────────────┘
+                                 │
+           ┌─────────────────────┴─────────────────────┐
+           ▼                                           ▼
+    ┌──────────────────────┐                    ┌──────────────────────┐
+    │   Static Analysis    │                    │   Dynamic Analysis   │
+    ├──────────────────────┤                    ├──────────────────────┤
+    │• Examine code without│                    │ • Execute sample in  │
+    │   executing binary   │                    │   isolated sandbox   │
+    │ • Inspect headers,   │                    │ • Monitor runtime    │
+    │   hashes, & strings  │                    │   system API calls   │
+    │ • Reverse engineering│                    │ • Observe network &  │
+    │   via disassemblers  │                    │   file modifications │
+    └──────────────────────┘                    └──────────────────────┘
 
 * **Static Analysis:** Inspects binary structure without execution. Analyzes file hashes (SHA-256), imported DLL functions, embedded strings, and header structures using tools like PEStudio or `strings`.
 * **Dynamic Analysis:** Executes the binary inside a sandboxed environment (e.g., Cuckoo Sandbox, ANY.RUN) while recording real-time behavior: process creation, registry modifications, network connections, and file drops.
@@ -125,3 +125,5 @@ Implementing proactive defense-in-depth measures significantly reduces system vu
 Understanding host-level threats requires combining static and dynamic analysis methodologies in isolated environments.
 
 ### Static Analysis vs. Dynamic Analysis
+
+For detailed breakdown of exploit mechanics and fixes, see [Exploitation Steps & Mitigations](exploits-and-mitigations.md).
