@@ -77,18 +77,18 @@ Understanding host-level threats requires combining static and dynamic analysis 
 
 ### Static Analysis vs. Dynamic Analysis
 
-   ┌─────────────────────────┐
-                │ Malware Analysis Methods│
-                └────────────┬────────────┘
+                ┌─────────────────────────────┐
+                │ **Malware Analysis Methods**
+                └────────────┬────────────────┘
                              │
        ┌─────────────────────┴─────────────────────┐
        ▼                                           ▼
 ┌──────────────────────┐                    ┌──────────────────────┐
-│   Static Analysis    │                     │   Dynamic Analysis   │
+│   Static Analysis    │                    │   Dynamic Analysis   │
 ├──────────────────────┤                    ├──────────────────────┤
-│ • Examine code without│                    │ • Execute sample in  │
+│• Examine code without│                    │ • Execute sample in  │
 │   executing binary   │                    │   isolated sandbox   │
-│ • Inspect headers,    │                    │ • Monitor runtime    │
+│ • Inspect headers,   │                    │ • Monitor runtime    │
 │   hashes, & strings  │                    │   system API calls   │
 │ • Reverse engineering│                    │ • Observe network &  │
 │   via disassemblers  │                    │   file modifications │
@@ -98,7 +98,6 @@ Understanding host-level threats requires combining static and dynamic analysis 
 * **Dynamic Analysis:** Executes the binary inside a sandboxed environment (e.g., Cuckoo Sandbox, ANY.RUN) while recording real-time behavior: process creation, registry modifications, network connections, and file drops.
 
 ### Analysis Sandbox Evidence
-> ![Screenshot 07: Static and Dynamic Sample Analysis](screenshots/07_malware_sandbox.png)  
 > *Static sample metadata analysis or sandbox dynamic execution logs.*
 
 ---
@@ -122,7 +121,6 @@ Implementing proactive defense-in-depth measures significantly reduces system vu
 * **Impact:** Minimizes potential attack vectors by reducing open network listeners (`systemctl disable <service_name>`).
 
 ### Hardening Verification Evidence
-> ![Screenshot 08: Firewall Configuration Output](screenshots/08_ufw_status.png)  
 > *Active host firewall status verifying restricted ports (`ufw status verbose`).*
 Understanding host-level threats requires combining static and dynamic analysis methodologies in isolated environments.
 
