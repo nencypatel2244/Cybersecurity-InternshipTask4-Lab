@@ -24,19 +24,16 @@ Reconnaissance ──> Scanning ──> Exploitation ──> Post-Exploitation �
 ### Step 2.1: Target Scanning & Service Identification
 * **Objective:** Identify exposed services on the target system (`192.168.56.102`).
 * **Evidence:**
-  > ![Screenshot 01: Nmap Scan Output](screenshots/01_nmap_scan.png)  
   > *Target scanning and open service identification output.*
 
 ### Step 2.2: Vulnerability Exploitation & Session Access
 * **Objective:** Verify vulnerability status using the Metasploit Framework.
 * **Evidence:**
-  > ![Screenshot 02: Metasploit Module Execution](screenshots/02_exploit_execution.png)  
   > *Module execution parameters and session initiation status.*
 
 ### Step 2.3: Post-Exploitation Information Gathering
 * **Objective:** Collect basic host identification details to confirm session access.
 * **Evidence:**
-  > ![Screenshot 03: Post-Exploitation Output](screenshots/03_sysinfo_hashdump.png)  
   > *Post-exploitation host system information (`sysinfo`) or hash listings (`hashdump`).*
 
 ---
@@ -46,13 +43,11 @@ Reconnaissance ──> Scanning ──> Exploitation ──> Post-Exploitation �
 ### Step 3.1: Service Credential Testing (Hydra)
 * **Objective:** Assess SSH password strength using dictionary-based authentication testing.
 * **Evidence:**
-  > ![Screenshot 04: Hydra Brute Force Output](screenshots/04_hydra_ssh.png)  
   > *Hydra SSH authentication testing results.*
 
 ### Step 3.2: Password Hash Auditing (John the Ripper)
 * **Objective:** Demonstrate offline password recovery against weak stored password hashes.
 * **Evidence:**
-  > ![Screenshot 05: John the Ripper Crack Output](screenshots/05_john_hashes.png)  
   > *John the Ripper processing `hashes.txt` and recovering password.*
 
 ---
@@ -62,7 +57,6 @@ Reconnaissance ──> Scanning ──> Exploitation ──> Post-Exploitation �
 ### Step 4.1: Web Interface Simulation Setup
 * **Objective:** Demonstrate how credential harvest interfaces function in social engineering campaigns.
 * **Evidence:**
-  > ![Screenshot 06: SET Web Server Running](screenshots/06_set_webserver.png)  
   > *Social-Engineer Toolkit (SET) web server listener active.*
 
 ### Step 4.2: Phishing Detection & User Awareness Training Guide
